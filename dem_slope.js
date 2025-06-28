@@ -84,10 +84,13 @@ function createGradientLegend(vizParams, title) {
   });
   legendPanel.add(colorBar);
 
-  var minLabel = ui.Label(vizParams.min, {margin: '0 8px 0 0'});
-  var maxLabel = ui.Label(vizParams.max, {margin: '0 0 0 8px'});
-  var labelsPanel = ui.Panel([minLabel, maxLabel],
-                             ui.Panel.Layout.Flow('horizontal'));
+  var minLabel = ui.Label(vizParams.min);
+  var maxLabel = ui.Label(vizParams.max);
+  var spacer = ui.Label('', {stretch: 'horizontal'});
+  var labelsPanel = ui.Panel(
+      [minLabel, spacer, maxLabel],
+      ui.Panel.Layout.Flow('horizontal'),
+      {stretch: 'horizontal', margin: '0 8px'});
   legendPanel.add(labelsPanel);
 
   return legendPanel;
