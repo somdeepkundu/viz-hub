@@ -1,7 +1,6 @@
 
 /**
- * Earth Engine Script to visualize multiple DEMs and slope side-by-side.
- * Creates an interface with a dropdown using full dataset names.
+ * Earth Engine Script to visualize multiple DEMs with derived Slope and slope side-by-side.
  */
  
 // Helper function to retrieve the elevation image and visualization for a given
